@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pomodoro Timer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-mode="work">
+  <main>
+    <header>
+      <h1>Pomodoro Timer</h1>
+      <div class="mode-badge" role="status" aria-live="polite">Work Session</div>
+    </header>
+
+    <section class="timer-display" aria-label="タイマー">
+      <div class="timer-ring">
+        <svg viewBox="0 0 220 220" aria-hidden="true">
+          <circle class="ring-bg" cx="110" cy="110" r="100"/>
+          <circle class="ring-progress" id="ring-progress" cx="110" cy="110" r="100"/>
+        </svg>
+        <output class="timer-readout" id="timer-readout">25:00</output>
+      </div>
+    </section>
+
+    <section class="controls" aria-label="タイマー操作">
+      <button id="btn-start-stop" class="btn btn-primary">Start</button>
+      <button id="btn-repeat" class="btn btn-secondary" hidden>Repeat</button>
+      <button id="btn-switch-mode" class="btn btn-ghost">Take a Break</button>
+    </section>
+
+    <footer class="session-counter">
+      <span id="session-count">0</span> sessions today
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
