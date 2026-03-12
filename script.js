@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   // --- Constants ---
-  const DURATIONS = { work: 25 * 60, break: 5 * 60 };
+  const DURATIONS = { work: 25 * 60, break: 10 * 60 };
   const RING_CIRCUMFERENCE = 628; // 2 * pi * r (r = 100)
 
   // --- State ---
